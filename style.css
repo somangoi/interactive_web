@@ -1,0 +1,65 @@
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  margin: 0;
+}
+div,
+section,
+header,
+footer,
+p,
+h1,
+h2 {
+  box-sizing: border-box;
+}
+a {
+  color: royalblue;
+}
+img {
+  /* 반응형이 될 수 있도록! */
+  max-width: 100%;
+  height: auto;
+}
+.global-width {
+  max-width: 620px;
+  margin: 0 auto; /*센터정렬*/
+  padding: 0 15px; /*좌우정렬*/
+}
+.scroll-graphic {
+  position: sticky;
+  top: 0; /*붙어있을 위치 지정(sticky와 함께 사용)*/
+  height: 100vh;
+}
+.graphic-item {
+  display: flex;
+  align-items: center; /*세로 방향 센터 정렬*/
+  justify-content: center; /*가로 방향 센터 정렬*/
+
+  position: absolute; /*이미지가 겹쳐있게 하기*/
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0; /*이미지 일단 안보이게 하기*/
+  transition: 0.5s; /*부드럽게 나타내기*/
+}
+.visible {
+  opacity: 1; /*visible클래스가 붙으면 이미지 보이게 하기*/
+}
+.scene-img {
+  max-height: 100vh; /* 창의 높이를 조절했을 때 이미지의 크기에 제한을 준다 */
+}
+.scroll-text {
+  position: relative;
+  /* z-index를 안주면 아래에 위치한 애들이 위에 올라온다. */
+}
+.step {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem; /* padding의 크기를 글자크기에 비례하도록 한다. */
+  margin-bottom: 60vh;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
